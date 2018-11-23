@@ -16,6 +16,7 @@ function init() {
     // Add navigation link to the navigation panel on the left of the page
     main.addContenItem("Inleiding", intro);
     main.addContenItem("Variabelen", variabelen);
+    main.addContenItem("Object", object);
     // Activate the first navigation link
     intro();
 }
@@ -53,5 +54,29 @@ function intro() {
 }
 
 function variabelen() {
-    alert("HALLO");
+   let postcode = "1234AB";
+   let huisnummer = 99;
+   let datum = "2018-01-01";
+   let gas = 300;
+   let water = 30;
+   let electriciteit = [1001, 1002];
+   let slimmeMeter = true;
+
+   let titel1 = "<h4>Verslag van de meting</h4>";
+   let kop1 = "Voor postcode " + postcode + " en huisnummer " + huisnummer + " zijn op "
+       + datum + " metingen gedaan en dit zijn de resultaten: gas=" + gas + ", water=" + water + ", electriciteitHoog=" + electriciteit[0] + " en electriciteitLaag=" + electriciteit[1] + ". Dit is gedaan met een slimme meter.";
+
+   let deel1 = titel1 + kop1;
+   let lengte = deel1.length;
+
+   let titel2 = "<h4>Nog wat eigenschappen</h4>";
+   let kop2 = "Het verslag heeft " + lengte + " tekens,";
+   let deel2 = titel2 + kop2;
+   let result = deel1 + deel2;
+
+    main.updateContent("Variabelen", result);
+}
+
+function object() {
+    alert("OBJECT");
 }
